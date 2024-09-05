@@ -441,6 +441,8 @@ footer {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block; 
+        position: relative;
+        z-index: 1001;
     }
 
     .nav-list {
@@ -452,6 +454,7 @@ footer {
         width: 100%;
         background-color: $secondary-color;
         text-align: center;
+        z-index: 1000;
 
         li {
             margin: 15px 0;
@@ -461,16 +464,6 @@ footer {
     .menu-active .nav-list {
         display: flex;
     }
-
-    .intro {
-        h1 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1rem;
-        }
-    }
-
 
     .cta {
         h2 {
