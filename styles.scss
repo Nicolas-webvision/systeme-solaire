@@ -1,0 +1,562 @@
+// STYLES DE BASE
+
+// Mes variables
+$primary-color: rgb(19, 52, 102);
+$secondary-color: rgb(102, 105, 118);
+$text-color: black;
+$text-color-2: white;
+$link-color: white;
+$container-color: rgb(238, 238, 238);
+
+$star-color: rgb(225, 214, 0);
+$container-bg-color: black;
+$star-size: 10px;
+$trail-length: 20px;
+$animation-duration: 2s;
+
+// VARIABLE POLICE 
+$title-font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+$font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+// VARIABLE MARGE 
+
+$container-max-width: 1200px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    line-height: 1.6;
+    background-color: rgb(255, 255, 255);
+
+}     
+
+p {
+    font-family: $font-family;
+}
+
+#video-section {
+    text-align: center; /* Centrer le contenu */
+    color: $text-color;
+}
+
+video, iframe {
+    max-width: 100%; /* Limiter la largeur à 100% du conteneur */
+    height: auto;    /* Ajuster la hauteur automatiquement pour maintenir les proportions */
+    
+}
+
+main {
+    flex: 1;
+}
+
+// SYSTEME D'ANCRAGE POUR LA PAGE PLANETES
+
+.planets-anchor {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #0b3d91;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin: 10px 0;
+  
+        a {
+          text-decoration: none;
+          color: #0b3d91;
+          font-size: 1.2em;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ff6347; /* Change la couleur au survol */
+          }
+        }
+      }
+    }
+  }
+
+// ETOILE FILANTE ET ASTEROIDE ANIMATION 
+
+#shooting-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10000;
+    
+}
+
+.shooting-star {
+    position: absolute;
+    background-size: contain; /* Ajuster la taille de l'image à l'élément */
+    background-repeat: no-repeat; /* Éviter la répétition de l'image */
+    background-position: center; /* Centrer l'image dans l'élément */
+    animation: shooting 2s ease-out infinite;
+    pointer-events: none;
+    border: none;
+    background-color: transparent; /* Assure la transparence du fond */
+}
+
+
+@keyframes shooting {
+    0% {
+        opacity: 0;
+        transform: translateX(0) translateY(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-1000px) translateY(1000px);
+    }
+}
+
+// MENU DE NAVIGATION
+header {
+    background-color: $primary-color;
+    color: $link-color;
+    padding: 25px 0;
+    
+    nav {
+        ul {
+            list-style: none;
+            display: flex; // Affichage en ligne pour le mode bureau
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    color: $link-color;
+                    text-decoration: none;
+                    font-family: $font-family;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: $link-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    display: none; // Caché par défaut
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $secondary-color;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+}
+
+.nav-list {
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    background-color: $primary-color;
+    width: auto; 
+    text-align: center;
+
+    li {
+        margin: 0 15px;
+    }
+}
+
+
+// STYLE DE LA SECTION D'APPEL A L'ACTION
+.cta {
+    text-align: center;
+    margin-top: 30px;
+
+    h2 {
+        margin-bottom: 15px;
+        color: $text-color;
+    }
+
+    p {
+
+        color: $text-color;
+        a {
+            color: $text-color;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// STYLE DU PIED DE PAGE 
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: $primary-color;
+    color: $link-color;
+
+    .footer-nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+
+            li {
+                display: inline;
+                margin: 0 15px;
+
+                a {
+                    color: $link-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// PAGE DES PLANETES
+.planet-section {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(14, 56, 86), rgb(90, 131, 169));
+
+    .planet-image {
+        flex: 1;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .planet-info {
+        flex: 1;
+        padding: 20px;
+        text-align: left;
+
+        h2 {
+            font-family: $title-font-family;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: $text-color-2;
+        }
+
+        p {
+            font-family: $font-family;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: $text-color-2;
+        }
+    }
+}
+
+/* Style pour le bouton de caractéristiques */
+.btn-characteristics {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-characteristics:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour la popup */
+.popup {
+    display: none; // Masquer par défaut
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Pour s'assurer que la popup est au-dessus de tout
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+// Bannière
+.banner {
+    position: relative;
+    height: 300px; // Hauteur par défaut
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; // Cache les parties de l'image qui dépassent
+
+    h1 {
+        font-family: $title-font-family;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-family: $font-family;
+        display: block;
+        }
+
+        h2 {
+            font-family: $title-font-family;
+            display: block;
+            margin: 0;
+            font-size: 2.5rem; // Taille du texte par défaut
+            z-index: 1; // Assure que le texte est au-dessus de l'image
+            margin-top: 100px;
+        }
+    
+
+        p {
+            font-size: 1em;
+            display: block;
+        }
+
+    // Image en arrière-plan
+    .image-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+    
+
+// SECTION TEXTE 
+
+.text-section {
+    background-color: rgb(207, 197, 178);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+
+    .text-container {
+        max-width: $container-max-width;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(251, 251, 251);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        text-align: center;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: $text-color;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    }
+}
+
+// CONTAINER BLOC 
+
+.container-bloc {
+    border-left: 5px solid $primary-color;
+    background: $container-color;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(234, 234, 234, 0.1);
+
+    h2 {
+        margin-top: 0;
+        color: $text-color;
+    }
+
+    p {
+        color: $text-color;
+    }
+}
+ 
+
+// STYLES REPONSIFS
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; 
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: $secondary-color;
+        text-align: center;
+
+        li {
+            margin: 15px 0;
+        }
+    }
+
+    .menu-active .nav-list {
+        display: flex;
+    }
+
+    .intro {
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+
+    .cta {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .planet-section {
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 15px;
+
+        .planet-image, .planet-info {
+            flex: none; 
+            width: 100%;
+            padding: 0; 
+        }
+
+        .planet-info {
+            text-align: center; 
+            padding-top: 15px;
+        }
+
+        h2 {
+            font-size: 1.5rem; 
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+    .banner {
+            height: 150px;
+        }
+    
+        .banner h1 {
+            font-size: 1.5rem;
+            padding: 0 10px; // Ajoute un peu d'espace sur les côtés
+        }
+    }
+
+    .text-section {
+        padding: 30px 10px;
+    }
+
+    .text-container {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container-bloc {
+        padding: 15px;
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+    .popup-content {
+                width: 90%;
+            }
+
+            #video-section {
+                margin: 10px;
+            }
+            
+            video, iframe {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    
+    
+ 
+
+
+
+

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Explorez le système solaire</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="description" content="Découvrez les mystères fascinants des planètes de notre système solaire et explorez leur beauté unique.">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="planetes.html">Planètes</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="shooting-stars"></div>
+            <section class="banner">
+                <h1>Les planètes</h1>
+                <img src="images/banner_3.jpg" alt="Ciel étoilé" class="image-banner">
+            </section>
+            <div id="shooting-stars"></div>
+            <section class="text-section">
+                <div class="text-container">
+                    <p>Plongez dans l'univers fascinant des planètes qui composent notre système solaire. Chaque monde, de la brûlante Mercure à l'immense Jupiter, révèle des mystères captivants et des caractéristiques uniques. Découvrez les paysages variés, les atmosphères intrigantes, et les secrets de ces géants cosmiques qui ornent notre ciel. Que vous soyez un passionné d'astronomie ou simplement curieux, cette exploration vous invite à admirer la diversité et la beauté des planètes qui gravitent autour de notre étoile, le Soleil.</p>
+                </div>
+            </section>
+
+            <section class="planets-anchor">
+                <h2>Explorez les planètes</h2>
+                <ul>
+                    <li><a href="#mercury">Mercure</a></li>
+                    <li><a href="#venus">Vénus</a></li>
+                    <li><a href="#neptune">Neptune</a></li>
+                    <li><a href="#march">Mars</a></li>
+                    <li><a href="#jupiter">Juputer</a></li>
+                    <li><a href="#uranus">Uranus</a></li>
+                    <li><a href="#saturn">Saturne</a></li>
+                    <li><a href="#earth">Terre</a></li>
+                </ul>
+            </section>
+                
+               
+
+            <section class="planet-section" id="mercury">
+                <div class="planet-image">
+                    <img src="images/mercure_photo.jpg" alt="Planète Mercure">
+                </div>
+                <div class="planet-info">
+                    <h2>Mercure</h2>
+                    <p>Mercure est la planète la plus proche du Soleil, et c'est aussi la plus petite du système solaire. Elle est presque de la même taille que la Lune de la Terre, avec un diamètre d'environ 4 880 kilomètres. En raison de sa proximité avec le Soleil, Mercure connaît des températures extrêmes, avec des journées extrêmement chaudes atteignant jusqu'à 430 degrés Celsius et des nuits glaciales où la température peut descendre à -180 degrés Celsius.</p>
+                    <p>Mercure ne possède pratiquement pas d'atmosphère, ce qui signifie qu'elle ne peut pas retenir la chaleur, expliquant ainsi ses températures variées. La surface de la planète est couverte de cratères, un peu comme la Lune, résultat des nombreux impacts d'astéroïdes et de comètes au cours de milliards d'années. On y trouve également de vastes plaines et des falaises qui s'étendent sur plusieurs centaines de kilomètres, créées par le rétrécissement de la planète en refroidissant.</p>
+                    <p>Une autre caractéristique fascinante de Mercure est sa rotation. Elle tourne très lentement sur son axe, prenant environ 59 jours terrestres pour effectuer une rotation complète, tandis qu'une année mercurienne, soit une révolution autour du Soleil, ne dure que 88 jours terrestres. Cela signifie qu'un jour solaire sur Mercure, c'est-à-dire le temps qu'il faut pour que le Soleil revienne à la même position dans le ciel, dure environ 176 jours terrestres, soit deux fois la durée d'une année sur Mercure.</p>
+                    <p>Mercure a été visitée par quelques sondes spatiales, dont Mariner 10 dans les années 1970 et plus récemment MESSENGER, qui a fourni des images détaillées de sa surface et des informations sur sa composition. Il reste encore beaucoup à apprendre sur cette planète mystérieuse et difficile à observer depuis la Terre en raison de sa proximité avec le Soleil.</p>
+                    <button class="btn-characteristics" data-target="mercure-popup">Caractéristiques</button>
+                </div>
+                </div>
+            </section>
+
+            <!-- Popup pour Mercure -->
+        <div class="popup" id="mercure-popup">
+            <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Mercure</h3>
+            <ul>
+                <li>Diamètre : 4 880 km</li>
+                <li>Distance au Soleil : 57,9 millions km</li>
+                <li>Température : jusqu'à 430°C en journée, -180°C la nuit</li>
+                <li>Durée d'une journée : 59 jours terrestres</li>
+                <li>Durée d'une année : 88 jours terrestres</li>
+                <li>Atmosphère : très mince, principalement de l'oxygène, du sodium et de l'hydrogène</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Mercure</h2>
+                <p>Bien que ce champ magnétique soit environ 1/100e de celui de la Terre, il est toujours un élément notable, car il suggère que Mercure a un noyau métallique liquide ou partiellement fondu qui génère ce champ. Ce champ magnétique protège la planète des particules solaires, créant une interaction complexe entre le vent solaire et l’atmosphère extrêmement mince de Mercure.</p>
+            </div>
+
+            <section class="planet-section" id="venus">
+                <div class="planet-image">
+                    <img src="images/venus_photo.jpg" alt="Planète Venus">
+                </div>
+                <div class="planet-info">
+                    <h2>Venus</h2>
+                    <p>Vénus est la deuxième planète du système solaire, souvent appelée la "sœur jumelle" de la Terre en raison de sa taille et de sa composition similaires. Cependant, malgré ces ressemblances, Vénus est un monde très différent et inhospitalier. Son atmosphère épaisse est composée principalement de dioxyde de carbone, avec des nuages d'acide sulfurique, ce qui crée un effet de serre extrêmement puissant. En conséquence, Vénus est la planète la plus chaude du système solaire, avec des températures à sa surface atteignant environ 465 degrés Celsius, suffisamment chaudes pour faire fondre le plomb.</p>
+                    <p>L'atmosphère de Vénus est si dense que la pression à sa surface est environ 90 fois celle de la Terre, équivalente à la pression que l'on trouverait à une profondeur d'un kilomètre sous l'eau sur notre planète. Ce mélange de chaleur intense et de pression écrasante rend toute forme de vie, telle que nous la connaissons, impossible sur Vénus.</p>
+                    <p>La rotation de Vénus est également unique. Elle tourne sur elle-même très lentement, prenant environ 243 jours terrestres pour effectuer une rotation complète, et encore plus surprenant, elle tourne en sens inverse par rapport à la plupart des autres planètes. Cela signifie que sur Vénus, le Soleil se lève à l'ouest et se couche à l'est. De plus, une année vénusienne, c'est-à-dire le temps qu'il faut pour que Vénus fasse le tour du Soleil, dure environ 225 jours terrestres, ce qui fait qu'un jour vénusien est en réalité plus long qu'une année vénusienne.</p>
+                    <p>La surface de Vénus est marquée par des volcans, des montagnes et des vastes plaines de lave solidifiée. On pense que le volcanisme est toujours actif sur Vénus, bien que cela n'ait pas encore été observé directement. En raison de la couverture nuageuse épaisse, il est impossible de voir la surface de Vénus avec des télescopes optiques depuis la Terre. Ce n'est qu'avec l'aide de sondes spatiales, comme la mission Magellan de la NASA, que des cartes détaillées de la surface ont été réalisées, grâce à l'utilisation du radar.</p>
+                    <p>Vénus a longtemps fasciné les astronomes et les scientifiques en raison de ses conditions extrêmes et de son apparence brillante dans le ciel terrestre, souvent visible juste avant le lever ou juste après le coucher du Soleil, ce qui lui vaut parfois le nom d' "étoile du matin" ou "étoile du soir". Bien que la planète soit un enfer brûlant, elle reste un sujet d'étude clé pour comprendre les dynamiques climatiques et géologiques des planètes rocheuses.</p>
+                    <button class="btn-characteristics" data-target="venus-popup">Caractéristiques</button>
+                </div>
+                </div>
+                </div>
+            </section>
+
+             <!-- Popup pour Vénus -->
+        <div class="popup" id="venus-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Vénus</h3>
+            <ul>
+                <li>Diamètre : 12 104 km</li>
+                <li>Distance au Soleil : 108,2 millions km</li>
+                <li>Température : environ 470°C</li>
+                <li>Durée d'une journée : 243 jours terrestres</li>
+                <li>Durée d'une année : 225 jours terrestres</li>
+                <li>Atmosphère : dense, composée principalement de dioxyde de carbone et de nuages d'acide sulfurique</li>
+            </ul>
+            </div>
+            </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Vénus</h2>
+                <p>Vénus possède des vents extrêmement rapides dans son atmosphère. À une altitude d'environ 60 kilomètres au-dessus de la surface, les vents peuvent atteindre des vitesses de 360 kilomètres par heure. Ces vents soufflent dans une direction est-ouest, bien plus rapidement que la rotation de la planète elle-même, et créent un effet de "super-rotation" de l'atmosphère, où l'air au-dessus de la surface se déplace beaucoup plus vite que la planète en rotation. Ce phénomène contribue à la dynamique complexe de l'atmosphère de Vénus et joue un rôle important dans la distribution de la chaleur sur la planète.</p>
+            </div>
+
+            <section class="planet-section" id="neptune">
+                <div class="planet-image">
+                    <img src="images/neptune_photo.jpg" alt="Planète Neptune">
+                </div>
+                <div class="planet-info">
+                    <h2>Neptune</h2>
+                    <p>Neptune est la huitième et dernière planète du système solaire, située à une distance moyenne de 4,5 milliards de kilomètres du Soleil. C'est une géante gazeuse, similaire à Uranus, avec une atmosphère composée principalement d'hydrogène, d'hélium et de méthane. Le méthane dans l'atmosphère de Neptune est ce qui lui donne sa couleur bleue distinctive, en absorbant la lumière rouge du Soleil et en reflétant la lumière bleue.</p>
+                    <p>Neptune est une planète froide et venteuse, avec des températures avoisinant -220 degrés Celsius. Ce qui la distingue particulièrement, ce sont ses vents incroyablement rapides, les plus violents du système solaire, atteignant des vitesses supérieures à 2 000 kilomètres par heure. Ces vents alimentent de gigantesques tempêtes, dont la plus célèbre est la Grande Tache Sombre, une tempête anticyclonique de la taille de la Terre observée par la sonde Voyager 2 en 1989. Bien que cette tache ait disparu depuis, d'autres tempêtes similaires ont été observées par la suite.</p>
+                    <p>Neptune a un noyau rocheux entouré d'un manteau composé d'eau, d'ammoniac et de méthane, ce qui crée une sorte de "glace chaude" sous des pressions extrêmes. Au-dessus de ce manteau se trouve l'atmosphère gazeuse dense qui s'étend sur des milliers de kilomètres.</p>
+                    <p>La planète possède également un système d'anneaux ténus et sombres, principalement constitués de particules de poussière glacée. Ces anneaux sont moins spectaculaires que ceux de Saturne, mais ils sont néanmoins fascinants pour les astronomes.</p>
+                    <p>Neptune a 14 lunes connues, dont la plus grande est Triton. Triton est un monde glacé, unique par sa rétrogradation, c'est-à-dire qu'il orbite autour de Neptune dans la direction opposée à la rotation de la planète. On pense que Triton était autrefois un objet de la ceinture de Kuiper, capturé par la gravité de Neptune. Triton est également notable pour ses geysers actifs qui éjectent de l'azote liquide, suggérant une activité géologique sous sa surface glacée.</p>
+                    <p>Neptune a été découverte en 1846 grâce à des calculs mathématiques avant même d'être observée directement, car des anomalies dans l'orbite d'Uranus indiquaient la présence d'une autre planète. Voyager 2 est la seule sonde à avoir survolé Neptune, fournissant une grande partie de ce que nous savons sur cette planète. En raison de sa grande distance du Soleil, Neptune met environ 165 ans terrestres pour accomplir une révolution complète autour du Soleil, ce qui signifie qu'elle n'a complété qu'une seule orbite depuis sa découverte.</p>
+                    <p>Neptune reste une planète mystérieuse et fascinante, en grande partie inexplorée, et continue d'être un sujet d'intérêt pour les astronomes qui cherchent à comprendre davantage sur les géantes gazeuses et les conditions extrêmes de l'espace lointain.</p>
+                    <button class="btn-characteristics" data-target="neptune-popup">Caractéristiques</button>
+                </div>
+            </section>
+
+                    <!-- Popup pour Neptune -->
+        <div class="popup" id="neptune-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Neptune</h3>
+            <ul>
+                <li>Diamètre : 49 244 km</li>
+                <li>Distance au Soleil : 4,5 milliards km</li>
+                <li>Température : environ -214°C</li>
+                <li>Durée d'une journée : 16 heures</li>
+                <li>Durée d'une année : 165 ans terrestres</li>
+                <li>Atmosphère : principalement d'hydrogène, d'hélium et de méthane</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Neptune</h2>
+                <p>Un fait surprenant sur Neptune est que cette planète produit plus de chaleur qu'elle n'en reçoit du Soleil. Malgré sa grande distance du Soleil, Neptune émet environ 2,7 fois plus d'énergie qu'elle n'en reçoit.</p>
+            </div>
+
+            <section class="planet-section" id="march">
+                <div class="planet-image">
+                    <img src="images/mars_photo.jpg" alt="Planète Mars">
+                </div>
+                <div class="planet-info">
+                    <h2>Mars</h2>
+                    <p>Mars est la quatrième planète du système solaire, souvent surnommée la "planète rouge" en raison de la couleur rougeâtre de sa surface, causée par l'oxyde de fer, ou rouille, qui recouvre le sol. Mars est l'une des planètes les plus étudiées et les plus fascinantes pour les scientifiques et le grand public en raison de sa proximité avec la Terre et de son potentiel pour abriter la vie, passée ou présente.</p>
+                    <p>La planète est plus petite que la Terre, avec un diamètre d'environ 6 779 kilomètres, soit un peu plus de la moitié de celui de notre planète. Mars possède des saisons comme la Terre, en raison de l'inclinaison de son axe, mais celles-ci durent presque deux fois plus longtemps car une année martienne équivaut à environ 687 jours terrestres.</p>
+                    <p>La surface de Mars est parsemée de caractéristiques géologiques impressionnantes. On y trouve le mont Olympe, le plus grand volcan du système solaire, qui s'élève à environ 22 kilomètres, ainsi que Valles Marineris, un gigantesque canyon qui s'étend sur près de 4 000 kilomètres, soit presque la largeur des États-Unis. Ces formations témoignent d'une activité géologique ancienne qui a modelé la planète il y a des milliards d'années.</p>
+                    <p>Mars possède une atmosphère très fine, composée principalement de dioxyde de carbone, avec des traces d'azote et d'argon. Cette atmosphère ténue ne permet pas de retenir beaucoup de chaleur, ce qui fait que les températures à la surface de Mars peuvent varier de -125 degrés Celsius durant la nuit polaire à environ 20 degrés Celsius à l'équateur en plein jour.</p>
+                    <p>Les pôles de Mars sont recouverts de calottes de glace faites de dioxyde de carbone gelé et d'eau. Ces calottes grandissent et rétrécissent au fil des saisons martiennes. De plus, Mars connaît des tempêtes de poussière qui peuvent englober toute la planète et durer des semaines, obscurcissant le ciel et modifiant temporairement le climat.</p>
+                    <p>Mars a deux petites lunes, Phobos et Déimos, qui sont probablement des astéroïdes capturés par la gravité de la planète. Phobos, la plus grande des deux, est en train de se rapprocher lentement de Mars et finira par s'écraser sur la planète ou se fragmenter pour former un anneau dans un lointain avenir.</p>
+                    <p>L'intérêt pour Mars est en grande partie alimenté par la question de savoir si la vie a pu ou pourrait encore exister sur la planète. Des missions telles que les rovers Spirit, Opportunity, Curiosity et plus récemment Perseverance, ainsi que les orbiteurs comme Mars Reconnaissance Orbiter, ont cherché des signes d'eau, de vie microbienne et de conditions habitables dans le passé. Les découvertes de rivières asséchées, de lacs anciens et de minéraux formés en présence d'eau renforcent l'idée que Mars était autrefois plus chaude et plus humide.</p>
+                    <p>Mars est également au centre des projets futurs d'exploration humaine. La NASA, ainsi que d'autres agences spatiales et entreprises privées comme SpaceX, travaillent sur des missions qui pourraient envoyer des humains sur Mars dans les décennies à venir. Cette exploration pourrait nous rapprocher encore plus de la compréhension de l'histoire de la planète et de la possibilité d'une colonisation humaine dans le futur.</p>
+                    <p>En somme, Mars est une planète qui suscite une grande fascination, à la fois pour son histoire géologique riche, ses conditions climatiques extrêmes, et son potentiel à révéler des secrets sur la vie au-delà de la Terre.</p>
+                    <button class="btn-characteristics" data-target="mars-popup">Caractéristiques</button>
+                </div>
+            </section>
+
+             <!-- Popup pour Mars -->
+        <div class="popup" id="mars-popup">
+            <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Mars</h3>
+            <ul>
+                <li>Diamètre : 6 779 km</li>
+                <li>Distance au Soleil : 227,9 millions km</li>
+                <li>Température : moyenne de -63°C</li>
+                <li>Durée d'une journée : 24,6 heures</li>
+                <li>Durée d'une année : 687 jours terrestres</li>
+                <li>Atmosphère : mince, principalement de dioxyde de carbone</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Mars</h2>
+                <p>Mars connaît régulièrement des tremblements de terre, appelés "marsquakes". Les premières preuves directes de ces secousses ont été détectées par la sonde InSight de la NASA, arrivée sur Mars en 2018. Contrairement aux tremblements de terre sur Terre, causés par le mouvement des plaques tectoniques, les marsquakes sont dus au lent refroidissement et à la contraction de la planète, ainsi qu'à l'activité volcanique résiduelle.</p>
+            </div>
+
+            <section class="planet-section" id="jupiter">
+                <div class="planet-image">
+                    <img src="images/jupiter_photo.jpg" alt="Planète Jupiter">
+                </div>
+                <div class="planet-info">
+                    <h2>Jupiter</h2>
+                    <p>Jupiter est la cinquième planète du système solaire et la plus grande de toutes, avec un diamètre d'environ 143 000 kilomètres, ce qui est plus de 11 fois celui de la Terre. C'est une géante gazeuse, composée principalement d'hydrogène et d'hélium, et elle n'a pas de surface solide comme les planètes rocheuses. Jupiter est surtout connue pour son immense taille, ses bandes colorées de nuages, et la Grande Tache Rouge, une tempête géante qui fait rage depuis au moins 350 ans.</p>
+                    <p>Cette Grande Tache Rouge est l'une des caractéristiques les plus emblématiques de Jupiter. C'est une tempête anticyclonique massive, deux à trois fois plus grande que la Terre, et elle tourne dans le sens inverse des aiguilles d'une montre. Bien que cette tache se soit réduite au fil des années, elle reste un phénomène climatique unique dans le système solaire.</p>
+                    <p>L'atmosphère de Jupiter est très dynamique, avec des bandes alternées de nuages clairs et sombres qui s'étendent autour de la planète. Ces bandes sont causées par des vents violents qui soufflent à des vitesses atteignant plus de 600 kilomètres par heure. Les nuages sont principalement composés d'ammoniac, d'eau et de méthane, et les variations de couleurs sont dues à des composés chimiques encore mal compris appelés chromophores.</p>
+                    <p>Sous l'atmosphère visible, Jupiter possède une couche de gaz comprimé, qui se transforme progressivement en un océan d'hydrogène métallique sous l'effet de la pression énorme exercée par les couches supérieures. Le cœur de Jupiter pourrait être une masse rocheuse dense, mais il est entouré d'une immense couche d'hydrogène métallique liquide, une forme de matière rare sur Terre.</p>
+                    <p>Jupiter possède un puissant champ magnétique, le plus intense de toutes les planètes du système solaire, qui s'étend bien au-delà de la planète elle-même et capture des particules de haute énergie, formant une puissante ceinture de radiation autour de la planète. Ce champ magnétique est environ 20 000 fois plus puissant que celui de la Terre.</p>
+                    <p>Autour de Jupiter, on trouve un système complexe d'anneaux fins et des dizaines de lunes, dont les quatre plus grandes sont Io, Europe, Ganymède, et Callisto, également appelées les lunes galiléennes car elles ont été découvertes par Galilée en 1610. Ces lunes sont des mondes fascinants en eux-mêmes : Io est le corps volcanique le plus actif du système solaire, Europe est recouverte d'une épaisse couche de glace sous laquelle un océan liquide pourrait abriter la vie, Ganymède est la plus grande lune du système solaire, plus grande que Mercure, et Callisto présente une surface cratérisée et très ancienne.</p>
+                    <p>Jupiter joue un rôle crucial dans le système solaire en raison de sa masse énorme. Son influence gravitationnelle aide à stabiliser les orbites des autres planètes, et elle agit comme un bouclier en capturant ou déviant de nombreux comètes et astéroïdes qui pourraient autrement frapper la Terre.</p>
+                    <p>L'exploration de Jupiter a été menée par plusieurs missions spatiales, notamment les sondes Pioneer, Voyager, Galileo, et plus récemment Juno, qui continue de fournir des données précieuses sur la composition, la gravité, le champ magnétique et les phénomènes atmosphériques de Jupiter.</p>
+                    <p>Jupiter reste un objet de fascination pour les astronomes et les scientifiques, non seulement en raison de sa taille et de sa complexité, mais aussi pour ce qu'elle peut nous apprendre sur la formation et l'évolution des géantes gazeuses et du système solaire dans son ensemble.</p>
+                    <button class="btn-characteristics" data-target="jupiter-popup">Caractéristiques</button>
+                </div>
+            </section>
+
+            <!-- Popup pour Jupiter -->
+        <div class="popup" id="jupiter-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Jupiter</h3>
+            <ul>
+                <li>Diamètre : 139 820 km</li>
+                <li>Distance au Soleil : 778,5 millions km</li>
+                <li>Température : environ -108°C</li>
+                <li>Durée d'une journée : 9,9 heures</li>
+                <li>Durée d'une année : 12 ans terrestres</li>
+                <li>Atmosphère : principalement d'hydrogène et d'hélium</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Jupiter</h2>
+                <p>Un fait surprenant sur Jupiter est que la planète possède une énorme aurora polaire, bien plus intense que celles observées sur Terre. Ces aurores sont créées par des interactions entre le champ magnétique puissant de Jupiter et les particules chargées du vent solaire. </p>
+            </div>
+
+            <section class="planet-section" id="uranus">
+                <div class="planet-image">
+                    <img src="images/uranus_photo.jpg" alt="Planète Uranus">
+                </div>
+                <div class="planet-info">
+                    <h2>Uranus</h2>
+                    <p>Uranus est la septième planète du système solaire, située à environ 2,9 milliards de kilomètres du Soleil. C'est une géante gazeuse, souvent appelée "géante de glace" en raison de sa composition et de ses températures extrêmement froides. Avec un diamètre d'environ 50 700 kilomètres, Uranus est la troisième plus grande planète du système solaire, bien que sa masse soit inférieure à celle de Neptune.</p>
+                    <p>L'une des caractéristiques les plus distinctives d'Uranus est son inclinaison extrême. L'axe de rotation d'Uranus est incliné à environ 98 degrés par rapport à son plan orbital, ce qui signifie qu'elle tourne presque sur le côté par rapport à son orbite autour du Soleil. Cette inclinaison unique donne lieu à des saisons extrêmement longues, chacune durant environ 21 ans terrestres, avec des pôles qui passent 42 ans dans une lumière constante suivis de 42 ans dans l'obscurité.</p>
+                    <p>Uranus a une atmosphère composée principalement d'hydrogène, d'hélium et de méthane. Le méthane absorbe la lumière rouge et reflète la lumière bleue et verte, ce qui donne à Uranus sa couleur bleu-vert caractéristique. Cependant, contrairement à Jupiter et Saturne, Uranus a une atmosphère relativement calme, sans les bandes visibles de nuages ni les grandes tempêtes que l'on observe sur les autres géantes gazeuses.</p>
+                    <p>Sous son atmosphère, Uranus possède un manteau de glace composé d'eau, d'ammoniac et de méthane, qui forme l'essentiel de sa masse. Contrairement à Jupiter et Saturne, Uranus ne semble pas avoir un noyau rocheux distinct; son intérieur est plutôt un mélange fluide de matériaux glacés et rocheux. Cette composition fait d'Uranus une planète froide, avec des températures descendant jusqu'à -224 degrés Celsius, ce qui en fait la planète la plus froide du système solaire.</p>
+                    <p>Uranus est entourée d'un système d'anneaux sombres et étroits, bien moins spectaculaires que ceux de Saturne, mais néanmoins intéressants. Ces anneaux sont principalement constitués de particules de glace et de roche, et ils ont été découverts en 1977 lorsqu'ils ont occulté la lumière d'une étoile lors d'une observation terrestre.</p>
+                    <p>La planète possède également 27 lunes connues, dont les plus grandes sont Titania, Obéron, Umbriel, Ariel, et Miranda. Ces lunes, nommées d'après des personnages des œuvres de Shakespeare et d'Alexander Pope, présentent une variété de paysages géologiques, avec des canyons profonds, des cratères d'impact, et des surfaces glacées.</p>
+                    <p>Uranus a été explorée de près une seule fois par la sonde Voyager 2 en 1986, qui a fourni une grande partie des données que nous avons aujourd'hui sur cette planète. Cette mission a révélé la structure complexe du champ magnétique d'Uranus, qui est lui aussi unique. Le champ magnétique est incliné par rapport à l'axe de rotation de la planète et décalé par rapport à son centre, créant des phénomènes magnétiques inhabituels.</p>
+                    <p>En raison de sa grande distance du Soleil et de la Terre, Uranus reste une planète mystérieuse, avec encore beaucoup de questions non résolues sur sa composition, son atmosphère et ses dynamiques internes. Les scientifiques espèrent qu'une future mission pourrait explorer Uranus plus en détail, en fournissant des informations cruciales sur les géantes de glace et sur la formation du système solaire.</p>
+                    <button class="btn-characteristics" data-target="uranus-popup">Caractéristiques</button>
+                </div>
+            </section>
+
+                    <!-- Popup pour Uranus -->
+        <div class="popup" id="uranus-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques d'Uranus</h3>
+            <ul>
+                <li>Diamètre : 50 724 km</li>
+                <li>Distance au Soleil : 2,87 milliards km</li>
+                <li>Température : environ -224°C</li>
+                <li>Durée d'une journée : 17,2 heures</li>
+                <li>Durée d'une année : 84 ans terrestres</li>
+                <li>Atmosphère : principalement d'hydrogène, d'hélium et de méthane</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Uranus</h2>
+                <p>Un fait surprenant sur Uranus est qu'elle possède des lunes qui semblent présenter des signes d'activité géologique passée ou même actuelle. Par exemple, la lune Miranda présente des caractéristiques géologiques intrigantes, telles que des canyons profonds et des terrasses en strates, suggérant qu'elle a subi des forces tectoniques ou des impacts qui ont remodelé sa surface.</p>
+            </div>
+
+            <section class="planet-section" id="saturn">
+                <div class="planet-image">
+                    <img src="images/saturne_photo.jpg" alt="Planète Saturne">
+                </div>
+                <div class="planet-info">
+                    <h2>Saturne</h2>
+                    <p>Saturne est la sixième planète du système solaire, renommée pour ses anneaux spectaculaires et sa taille imposante. Avec un diamètre d'environ 120 000 kilomètres, elle est la deuxième plus grande planète après Jupiter. Comme les autres géantes gazeuses, Saturne est principalement constituée d'hydrogène et d'hélium, et elle ne possède pas de surface solide définie.</p>
+                    <p>Les anneaux de Saturne sont ses caractéristiques les plus emblématiques. Découverts pour la première fois par Galilée en 1610, ces anneaux sont composés principalement de glace d'eau avec des fragments de roche. Ils s'étendent sur une large bande autour de la planète mais sont étonnamment fins, ne mesurant que quelques centaines de mètres d'épaisseur. Les anneaux sont divisés en plusieurs groupes et sous-groupes, dont les principaux sont les anneaux A, B et C. Le système d'anneaux est maintenu en place par des lunes de Saturne appelées "satellites shepherds" qui empêchent les anneaux de se disperser.</p>
+                    <p>L'atmosphère de Saturne est caractérisée par une variété de nuages et de tempêtes. Les bandes nuageuses visibles sont similaires à celles de Jupiter, bien que moins prononcées. Les tempêtes sur Saturne peuvent être très puissantes, avec des vents atteignant des vitesses de 1 800 kilomètres par heure, ce qui est parmi les plus rapides du système solaire. Saturne possède également un phénomène appelé la Grande Tache Blanche, une tempête périodique massive qui apparaît tous les 30 ans environ.</p>
+                    <p>Sous son atmosphère, Saturne possède une structure interne complexe. Le noyau central est probablement composé de roche et de métal, entouré d'un manteau de glace et d'hydrogène métallique liquide. La planète a une densité très faible, en fait elle est moins dense que l'eau, ce qui signifie qu'elle flotterait dans un océan suffisamment grand.</p>
+                    <p>Saturne est entourée de 83 lunes confirmées, dont les plus grandes sont Titan, Rhéa, Japet, Dione et Encelade. Titan est particulièrement remarquable, car elle est la deuxième plus grande lune du système solaire et possède une atmosphère dense riche en azote, ainsi que des mers et des lacs de méthane liquide sur sa surface. Encelade est une autre lune notable en raison de ses geysers d'eau glacée qui éjectent de la matière depuis un océan sous-jacent, suggérant la possibilité d'un environnement potentiellement habitable.</p>
+                    <p>Le champ magnétique de Saturne est environ 578 fois plus fort que celui de la Terre et est incliné par rapport à l'axe de rotation de la planète. Ce champ magnétique est généré par un noyau métallique liquide en rotation rapide et crée une magnétosphère vaste qui interagit avec le vent solaire et les anneaux.</p>
+                    <p>Saturne a été explorée principalement par les sondes spatiales Pioneer 11, Voyager 1 et 2, et surtout par la mission Cassini-Huygens, qui a fourni une quantité énorme d'informations sur la planète, ses anneaux et ses lunes. Cassini a orbitée autour de Saturne de 2004 à 2017, et a permis des découvertes majeures sur les dynamiques atmosphériques de Saturne, les détails de ses anneaux, et les environnements fascinants des lunes.</p>
+                    <p>L'exploration de Saturne continue d'attirer l'intérêt scientifique en raison de ses caractéristiques uniques et de ses nombreuses lunes intrigantes, chacune ayant le potentiel de révéler des aspects nouveaux et importants sur les géantes gazeuses et les conditions dans le système solaire.</p>
+                    <button class="btn-characteristics" data-target="saturn-popup">Caractéristiques</button>
+                </div>
+            </section>
+
+                    <!-- Popup pour Saturne -->
+        <div class="popup" id="saturn-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Caractéristiques de Saturne</h3>
+            <ul>
+                <li>Diamètre : 116 460 km</li>
+                <li>Distance au Soleil : 1,43 milliards km</li>
+                <li>Température : environ -178°C</li>
+                <li>Durée d'une journée : 10,7 heures</li>
+                <li>Durée d'une année : 29,5 ans terrestres</li>
+                <li>Atmosphère : principalement d'hydrogène et d'hélium</li>
+            </ul>
+        </div>
+        </div>
+
+            <div class="container-bloc">
+                <h2>Fait intéressant sur Saturne</h2>
+                <p>Un fait surprenant sur Saturne est que ses anneaux produisent des ondes de choc dans l'atmosphère de la planète. Ces ondes, générées par l'interaction des particules des anneaux avec le champ magnétique de Saturne, créent des variations de pression qui se propagent dans les couches supérieures de l'atmosphère.</p>
+            </div>
+
+            <section class="planet-section" id="earth">
+                <div class="planet-image">
+                    <img src="images/terre_photo.jpg" alt="Planète Terre">
+                </div>
+                <div class="planet-info">
+                    <h2>Terre</h2>
+                    <p>La Terre est la troisième planète du système solaire et la seule connue pour abriter la vie. Elle est souvent décrite comme la "planète bleue" en raison de la grande quantité d'eau qui couvre environ 71% de sa surface. La Terre possède une atmosphère riche en oxygène, des climats variés, et une biodiversité exceptionnelle qui soutient une multitude d'écosystèmes.</p>
+                    <p>Avec un diamètre d'environ 12 742 kilomètres, la Terre est la cinquième plus grande planète du système solaire. Elle a une forme légèrement aplatie aux pôles, ce qui donne un rayon équatorial légèrement plus grand que le rayon polaire. Le climat de la Terre est régulé par une combinaison de facteurs, y compris la présence de gaz à effet de serre, les courants océaniques et l'inclinaison de son axe.</p>
+                    <p>La surface terrestre est composée de plusieurs grandes plaques tectoniques qui se déplacent lentement, causant des tremblements de terre et formant des chaînes de montagnes. Le plus haut sommet de la Terre est le mont Everest, qui s'élève à environ 8 848 mètres au-dessus du niveau de la mer, tandis que la fosse des Mariannes, la dépression océanique la plus profonde, atteint environ 10 994 mètres sous la surface de l'océan.</p>
+                    <p>La Terre possède une atmosphère composée principalement d'azote (78%) et d'oxygène (21%), avec des traces d'autres gaz comme le dioxyde de carbone. Cette atmosphère permet le maintien de conditions favorables à la vie, en protégeant la planète des radiations solaires nocives et en régulant les températures.</p>
+                    <p>Les pôles de la Terre sont recouverts de calottes glaciaires, qui jouent un rôle crucial dans le régulation du climat global. La glace des pôles fond et se reforme au fil des saisons, et les calottes glaciaires contribuent également à la régulation du niveau de la mer. En plus des calottes glaciaires, les océans couvrent une grande partie de la planète, et jouent un rôle majeur dans le climat et les cycles de l'eau.</p>
+                    <p>La Terre est le siège d'une diversité impressionnante de formes de vie, allant des micro-organismes aux grands mammifères, en passant par les plantes, les oiseaux, et bien d'autres. Cette biodiversité est soutenue par les différents habitats terrestres et aquatiques, allant des jungles tropicales aux déserts arides, en passant par les récifs coralliens.</p>
+                    <p>La recherche sur la Terre se concentre sur la compréhension de ses processus naturels, la gestion des ressources, et la protection de l'environnement. Les préoccupations liées au changement climatique, à la pollution, et à la conservation des espèces sont au cœur des efforts scientifiques et politiques actuels.</p>
+                    <p>En somme, la Terre est une planète unique en son genre, offrant des conditions idéales pour la vie et un environnement riche en diversité naturelle. Sa beauté, sa complexité, et sa fragilité en font un objet de fascination et une responsabilité pour les générations futures.</p>
+                    <button class="btn-characteristics" data-target="earth-popup">Caractéristiques</button>
+                </div>
+            </section>
+            
+            <!-- Popup pour la Terre -->
+            <div class="popup" id="earth-popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h3>Caractéristiques de la Terre</h3>
+                    <ul>
+                        <li>Diamètre : 12 742 km</li>
+                        <li>Distance au Soleil : 149,6 millions km</li>
+                        <li>Température : moyenne de 15°C</li>
+                        <li>Durée d'une journée : 24 heures</li>
+                        <li>Durée d'une année : 365,25 jours terrestres</li>
+                        <li>Atmosphère : principalement azote (78%) et oxygène (21%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-bloc">
+                <p><div class="container-bloc">
+                    <h2>Fait intéressant sur la Terre</h2>
+                    <p>Grâce à la pression atmosphérique et à la température modérée sur notre planète, l'eau peut exister sous trois formes : solide (glace), liquide (eau) et gazeuse (vapeur). Cette particularité joue un rôle crucial dans le maintien des conditions nécessaires à la vie. En comparaison, sur d'autres planètes ou lunes, l'eau est généralement présente uniquement sous forme de glace ou de vapeur, en raison des conditions extrêmes de température et de pression.</p>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <p>&copy; 2024 Système Solaire. Tous droits réservés</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="legal-notices.html">Mentions légales</a></li>
+                    <li><a href="planetes.html">Planètes</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
