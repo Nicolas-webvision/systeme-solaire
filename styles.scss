@@ -7,6 +7,7 @@ $text-color: black;
 $text-color-2: white;
 $link-color: white;
 $container-color: rgb(238, 238, 238);
+$menu-bg-color: $secondary-color;
 
 $star-color: rgb(225, 214, 0);
 $container-bg-color: black;
@@ -21,6 +22,10 @@ $font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sa
 // VARIABLE MARGE 
 
 $container-max-width: 1200px;
+
+// VARIABLE ANIMATION 
+
+$transition-speed: 0.3s;
 
 body {
     margin: 0;
@@ -164,7 +169,7 @@ header {
 }
 
 .menu-toggle {
-    display: none; // Caché par défaut
+    display: none; // Caché par défaut sur les grands écrans
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -175,18 +180,18 @@ header {
         display: block;
         width: 30px;
         height: 3px;
-        background-color: $secondary-color;
+        background-color: white;
         margin: 6px 0;
-        transition: 0.3s;
+        transition: background-color $transition-speed ease;
     }
 }
 
 .nav-list {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     position: relative;
     background-color: $primary-color;
-    width: auto; 
+    width: auto;
     text-align: center;
 
     li {
@@ -441,29 +446,71 @@ footer {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block; 
-        position: relative;
-        z-index: 1001;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+
+        .bar {
+            display: block;
+            width: 30px; 
+            height: 3px; 
+            background-color: white; 
+            margin: 6px 0; 
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+        }
+
+        // Transformation des barres lorsqu'elles sont activées
+        &.active {
+            .bar:nth-child(1) {
+                transform: rotate(45deg) translateY(7px); 
+            }
+
+            .bar:nth-child(2) {
+                opacity: 0; 
+            }
+
+            .bar:nth-child(3) {
+                transform: rotate(-45deg) translateY(-7px); 
+            }
+        }
     }
 
     .nav-list {
         display: none; 
-        flex-direction: column; 
+        flex-direction: column;
         position: absolute;
         top: 50px;
         left: 0;
         width: 100%;
-        background-color: $secondary-color;
+        background-color: $menu-bg-color; 
         text-align: center;
         z-index: 1000;
+        font-family: $font-family; 
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease; 
 
         li {
             margin: 15px 0;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.3s; 
         }
     }
 
-    .menu-active .nav-list {
+    .nav-list.menu-active {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
+
+        li {
+            opacity: 1;
+        }
     }
+
+
+
 
     .cta {
         h2 {

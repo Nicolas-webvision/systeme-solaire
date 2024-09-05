@@ -129,9 +129,9 @@ header nav ul li a:hover {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: rgb(102, 105, 118);
+  background-color: white;
   margin: 6px 0;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .nav-list {
@@ -355,8 +355,28 @@ footer .footer-nav ul li a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: relative;
-    z-index: 1001;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  .menu-toggle .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
   }
   .nav-list {
     display: none;
@@ -368,12 +388,23 @@ footer .footer-nav ul li a:hover {
     background-color: rgb(102, 105, 118);
     text-align: center;
     z-index: 1000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   .nav-list li {
     margin: 15px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s;
   }
-  .menu-active .nav-list {
+  .nav-list.menu-active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .nav-list.menu-active li {
+    opacity: 1;
   }
   .cta h2 {
     font-size: 1.5rem;

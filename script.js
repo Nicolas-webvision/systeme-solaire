@@ -1,8 +1,10 @@
 // MENU DE NAVIGATION 
 const menuToggle = document.getElementById('menu-toggle');
 const navList = document.querySelector('.nav-list');
+
 menuToggle.addEventListener('click', () => {
-    document.body.classList.toggle('menu-active');
+    navList.classList.toggle('menu-active');
+    menuToggle.classList.toggle('active');
 });
 
 // ETOILES FILANTE ET ASTEROIDE 
