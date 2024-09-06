@@ -593,6 +593,51 @@ footer {
             }
         }
 
+        // Point de rupture spécifique pour l'iPhone 12 Mini (ou petits appareils)
+@media (max-width: 375px) {
+    .menu-toggle {
+        top: 8px;
+        left: 8px;
+
+        .bar {
+            width: 25px; 
+            height: 2.5px;
+        }
+    }
+
+    .banner {
+        height: 120px; 
+    }
+
+    .banner h1 {
+        font-size: 1.3rem; 
+        padding: 0 8px; 
+    }
+
+    .cta h2 {
+        font-size: 1.3rem; 
+    }
+
+    .cta p {
+        font-size: 0.9rem; 
+    }
+
+    .planet-section h2 {
+        font-size: 1.3rem; 
+    }
+
+    .planet-section p {
+        font-size: 0.9rem; 
+    }
+
+    .container-bloc h2 {
+        font-size: 1.3em; 
+    }
+
+    .container-bloc p {
+        font-size: 0.9em;
+    }
+}
     
     
  
