@@ -69,3 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// BOUTON PERMETTANT DE REMONTER EN HAUT DE LA PAGE PLANETES
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    if (!backToTopButton) {
+      console.error('Element with ID "back-to-top" not found.');
+      return;
+    }
+  
+    window.onscroll = function() {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+  
+    backToTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });

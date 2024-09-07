@@ -43,6 +43,33 @@ p {
     font-family: $font-family;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; 
+    font-size: 24px; 
+    color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 8px;
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    z-index: 1000;
+  
+    &:hover {
+      color: black; 
+      background-color: rgba(255, 255, 255, 1); 
+    }
+  
+    @media screen and (max-width: 600px) {
+      font-size: 20px; 
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  
+
 #video-section {
     text-align: center; /* Centrer le contenu */
     color: $text-color;

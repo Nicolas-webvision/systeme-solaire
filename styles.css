@@ -14,6 +14,32 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+}
+#back-to-top:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 600px) {
+  #back-to-top {
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
 #video-section {
   text-align: center; /* Centrer le contenu */
   color: black;
