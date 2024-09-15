@@ -1,11 +1,22 @@
 // MENU DE NAVIGATION 
 const menuToggle = document.getElementById('menu-toggle');
 const navList = document.querySelector('.nav-list');
+const subMenuToggles = document.querySelectorAll('.nav-list > li');
 
-menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('menu-active');
-    menuToggle.classList.toggle('active');
-});
+menuToggle.addEventListener('click', function() {
+    navList.classList.toggle('menu-active'); // Activer la classe pour le menu mobile
+    menuToggle.classList.toggle('active');   // Changer l'apparence du bouton hamburger si nécessaire
+  });
+
+// Gestion des sous-menus
+subMenuToggles.forEach((toggle) => {
+    toggle.addEventListener('click', function() {
+        const subMenu = this.querySelector('.sub-menu');
+        if (subMenu) {
+            this.classList.toggle('sub-menu-active'); // Activer/désactiver le sous-menu
+        }
+    });
+});  
 
 // ETOILES FILANTE ET ASTEROIDE 
 

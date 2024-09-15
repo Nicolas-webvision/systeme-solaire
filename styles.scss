@@ -165,66 +165,101 @@ main {
 
 // MENU DE NAVIGATION
 header {
-    background-color: $primary-color;
-    color: $link-color;
+    background-color: $primary-color;  
+    color: $link-color;                
     padding: 25px 0;
-    
+  
     nav {
-        ul {
+      ul {
+        list-style: none;
+        display: flex; 
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          position: relative; 
+          margin: 0 15px;
+  
+          a {
+            color: $link-color; 
+            text-decoration: none;
+            font-family: $font-family; 
+  
+            &:hover {
+              text-decoration: underline;
+              color: $link-color;
+            }
+          }
+  
+          // SOUS-MENU
+          .sub-menu {
+            display: none; // Caché par défaut
+            position: absolute; // Position absolue pour placer le sous-menu par rapport à son parent
+            top: 100%; // Juste en dessous du lien parent
+            left: 0;
+            background-color: #273c99; // Couleur de fond du sous-menu
             list-style: none;
-            display: flex; // Affichage en ligne pour le mode bureau
-            justify-content: center;
             padding: 0;
             margin: 0;
-
+  
             li {
-                margin: 0 15px;
-
-                a {
-                    color: $link-color;
-                    text-decoration: none;
-                    font-family: $font-family;
-
-                    &:hover {
-                        text-decoration: underline;
-                        color: $link-color;
-                    }
+              width: 150px;
+  
+              a {
+                padding: 10px;
+                display: block;
+                color: white;
+                background-color: transparent;
+  
+                &:hover {
+                  background-color: transparent;
                 }
+              }
             }
+          }
+  
+          // Afficher le sous-menu au survol du parent
+          &:hover .sub-menu {
+            display: block; // Affiche le sous-menu au survol
+          }
         }
+      }
     }
-}
-
-.menu-toggle {
+  }
+  
+  .menu-toggle {
     display: none; // Caché par défaut sur les grands écrans
     cursor: pointer;
     position: absolute;
     top: 10px;
     left: 10px;
     z-index: 1000;
-
+  
     .bar {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        margin: 6px 0;
-        transition: background-color $transition-speed ease;
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 6px 0;
+      transition: background-color $transition-speed ease;
     }
-}
-
-.nav-list {
+  }
+  
+  .nav-list {
     display: flex;
     flex-direction: row;
     position: relative;
-    background-color: $primary-color;
+    background-color: $primary-color; // Assure-toi que cette variable est bien définie
     width: auto;
     text-align: center;
-
+  
     li {
-        margin: 0 15px;
+      margin: 0 15px;
     }
-}
+  }
+  
+
 
 
 // STYLE DE LA SECTION D'APPEL A L'ACTION
@@ -504,38 +539,67 @@ footer {
         }
     }
 
-    .nav-list {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background-color: $menu-bg-color; 
-        text-align: center;
-        z-index: 1000;
-        font-family: $font-family; 
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease; 
-
-        li {
-            margin: 15px 0;
+    @media (max-width: 768px) {
+        .nav-list {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background-color: rgb(0, 22, 74);
+            text-align: center;
+            z-index: 1000;
+            font-family: Arial, sans-serif; /* Remplace la variable $font-family */
             opacity: 0;
-            transition: opacity 0.3s ease 0.3s; 
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
-    }
-
-    .nav-list.menu-active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-
-        li {
+    
+        .nav-list.menu-active {
+            display: flex;
             opacity: 1;
+            transform: translateY(0);
+        }
+    
+        .nav-list li {
+            position: relative; /* Position relative pour que le sous-menu soit positionné par rapport à l'élément parent */
+            margin: 15px 0;
+            opacity: 1;
+            transition: opacity 0.3s ease 0.3s;
+        }
+    
+        /* Sous-menu centré et stable */
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0; 
+            width: 100%; 
+            background-color: rgb(0, 22, 74);
+            text-align: center; 
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1001;
+        }
+    
+        /* Affichage du sous-menu lors du clic */
+        .sub-menu-active .sub-menu {
+            display: flex; /* Afficher le sous-menu */
+        }
+    
+        .sub-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px; /* Ajout d'espacement autour des liens */
+        }
+    
+        .sub-menu a:hover {
+            text-decoration: underline;
         }
     }
-
+    
 
 
 
@@ -619,5 +683,6 @@ footer {
                 height: auto;
             }
         }
+        
 
         
