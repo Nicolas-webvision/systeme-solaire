@@ -220,7 +220,7 @@ header {
           }
   
           // Afficher le sous-menu au survol du parent
-          &:hover .sub-menu {
+          &:hover .sub-menu, .sub-menu:hover {
             display: block; // Affiche le sous-menu au survol
           }
         }
